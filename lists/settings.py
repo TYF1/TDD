@@ -7,6 +7,7 @@ INSTALLED_APPS=[
     'django.contrib.staticfiles',
     'lists',
 ]
+STATIC_URL='/static/'
 DATABASES={
     'default':{
         'ENGINE':'django.db.backends.sqlite3',
