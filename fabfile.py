@@ -21,7 +21,13 @@ def deploy():
     run("""
         cd {} &&
         pip3 install -r requirements.txt &&
+        """.format(source_folder)) 
+    run("""
+        cd {} &&
         python3 manage.py collectstatic --noinput &&
+        """.format(source_folder)) 
+    run("""
+        cd {} &&
         python3 manage.py migrate &&
         """.format(source_folder)) 
     sudo('pkill -f uwsgi -9')
