@@ -30,5 +30,6 @@ def deploy():
         cd {} &&
         python3 manage.py migrate
         """.format(source_folder)) 
-    sudo('pkill -f uwsgi -9')
+    run("pkill -f uwsgi -9") 
+    sudo('')
     sudo('service nginx reload')
