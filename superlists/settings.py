@@ -80,10 +80,7 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'database/db.sqlite3'),
     }
 }
-<<<<<<< HEAD
-print(BASE_DIR)
-=======
->>>>>>> 163123c (test)
+
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
