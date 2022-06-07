@@ -20,15 +20,15 @@ def deploy():
     run('cd %s && git pull origin master' % source_folder) 
     run("""
         cd {} &&
-        pip3 install -r requirements.txt &&
+        pip3 install -r requirements.txt 
         """.format(source_folder)) 
     run("""
         cd {} &&
-        python3 manage.py collectstatic --noinput &&
+        python3 manage.py collectstatic --noinput
         """.format(source_folder)) 
     run("""
         cd {} &&
-        python3 manage.py migrate &&
+        python3 manage.py migrate
         """.format(source_folder)) 
     sudo('pkill -f uwsgi -9')
     sudo('service nginx reload')
